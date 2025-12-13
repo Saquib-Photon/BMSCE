@@ -8,7 +8,6 @@ struct Node {
 
 struct Node* head = NULL;
 
-// Create SLL with user-given size and values
 void createList() {
     int n, value, i;
     printf("Enter number of nodes: ");
@@ -22,7 +21,6 @@ void createList() {
     printf("Enter value for node 1: ");
     scanf("%d", &value);
 
-    // First node creation
     head = (struct Node*)malloc(sizeof(struct Node));
     head->data = value;
     head->next = NULL;
@@ -44,7 +42,6 @@ void createList() {
     printf("Singly Linked List Created Successfully!\n");
 }
 
-// Insert at start
 void insertAtStart(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -52,7 +49,6 @@ void insertAtStart(int value) {
     head = newNode;
 }
 
-// Insert at end
 void insertAtEnd(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -70,7 +66,6 @@ void insertAtEnd(int value) {
     temp->next = newNode;
 }
 
-// Insert at position
 void insertAtPosition(int value, int position) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -100,7 +95,6 @@ void insertAtPosition(int value, int position) {
     temp->next = newNode;
 }
 
-// Delete at start
 void deleteAtStart() {
     if (head == NULL) {
         printf("List is empty\n");
@@ -111,7 +105,6 @@ void deleteAtStart() {
     free(temp);
 }
 
-// Delete at end
 void deleteAtEnd() {
     if (head == NULL) {
         printf("List is empty\n");
@@ -132,7 +125,6 @@ void deleteAtEnd() {
     temp->next = NULL;
 }
 
-// Delete at position
 void deleteAtPosition(int position) {
     if (head == NULL) {
         printf("List is empty\n");
@@ -164,7 +156,6 @@ void deleteAtPosition(int position) {
     free(del);
 }
 
-// Display
 void display() {
     if (head == NULL) {
         printf("List is empty\n");
@@ -181,8 +172,6 @@ void display() {
 
 int main() {
     int choice, value, position;
-
-    // Create SLL before menu appears
     createList();
 
     while (1) {
@@ -235,4 +224,5 @@ int main() {
         }
     }
     return 0;
+
 }
