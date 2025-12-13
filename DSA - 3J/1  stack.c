@@ -3,8 +3,6 @@
 
 int stack[MAX];
 int top = -1;
-
-// Push operation
 void push(int value) {
     if (top >= MAX - 1) {
         printf("Stack Overflow\n");
@@ -14,8 +12,6 @@ void push(int value) {
         printf("%d pushed to stack\n", value);
     }
 }
-
-// Pop operation
 void pop() {
     if (top < 0) {
         printf("Stack Underflow\n");
@@ -25,7 +21,6 @@ void pop() {
     }
 }
 
-// Display operation
 void display() {
     if (top < 0) {
         printf("Stack is empty\n");
@@ -37,7 +32,6 @@ void display() {
     }
 }
 
-// Main function
 int main() {
     int choice, value;
 
@@ -63,4 +57,5 @@ int main() {
                 printf("Invalid choice\n");
         }
     }
+
 }
