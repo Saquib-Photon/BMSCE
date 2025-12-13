@@ -8,7 +8,6 @@ struct Node {
 
 struct Node* head = NULL;
 
-// Create SLL with user-given size and values
 void createList() {
     int n, value, i;
 
@@ -44,7 +43,6 @@ void createList() {
     printf("List created successfully!\n");
 }
 
-// Sort list (ascending)
 void sortList() {
     if (head == NULL) {
         printf("List is empty\n");
@@ -67,7 +65,6 @@ void sortList() {
     printf("List sorted successfully!\n");
 }
 
-// Reverse list
 void reverseList() {
     struct Node *prev = NULL, *curr = head, *nextNode = NULL;
 
@@ -82,7 +79,6 @@ void reverseList() {
     printf("List reversed successfully!\n");
 }
 
-// Concatenate 2 SLLs
 void concatenateLists() {
     struct Node *head2 = NULL, *temp, *newNode;
     int n, value, i;
@@ -130,7 +126,6 @@ void concatenateLists() {
     printf("Lists concatenated successfully!\n");
 }
 
-// MAIN MENU
 int main() {
     int choice;
 
@@ -170,4 +165,5 @@ int main() {
     }
 
     return 0;
+
 }
