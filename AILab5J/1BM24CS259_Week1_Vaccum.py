@@ -12,7 +12,6 @@ def vacuum_cleaner(location, room_a, room_b):
 
         print("\nStep", step)
 
-        # Vacuum is in Room A
         if location == "A":
 
             if room_a == "Dirty":
@@ -23,7 +22,6 @@ def vacuum_cleaner(location, room_a, room_b):
                 print("Action: MOVE RIGHT")
                 location = "B"
 
-        # Vacuum is in Room B
         else:
 
             if room_b == "Dirty":
@@ -44,11 +42,8 @@ def vacuum_cleaner(location, room_a, room_b):
     print("Both rooms are clean.")
     print("Vacuum Location:", location)
 
-
-# Input
 location = input("Enter vacuum location (A/B): ").upper()
 room_a = input("Enter Room A status (Clean/Dirty): ").capitalize()
 room_b = input("Enter Room B status (Clean/Dirty): ").capitalize()
 
-# Run the agent
 vacuum_cleaner(location, room_a, room_b)
